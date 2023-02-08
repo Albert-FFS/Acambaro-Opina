@@ -159,6 +159,60 @@ nav ul li:hover a {
   -ms-transition: all ease 0.5s;
   -o-transition: all ease 0.5s;
 }
+.modal {
+  position: absolute;
+  top: -100vh;
+  left: 10vw;
+  width: 80vw;
+  height: 80vh;
+  background: #fff;
+  z-index: -10;
+  transition: all ease 1s;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+  -ms-transition: all ease 1s;
+  -o-transition: all ease 1s;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2em;
+}
+.CloseButton {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  color: #fff;
+  background-color: #f00;
+  padding: 1em;
+  border: #fff solid 2px;
+  border-radius: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition:all ease .5s ;
+}
+.CloseButton:hover{
+  color: #f00;
+  background-color: #fff;
+  border: #f00 2px solid;
+  transition: all ease .5s;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  -ms-transition: all ease .5s;
+  -o-transition: all ease .5s;
+}
+.OpenModal {
+  scroll-behavior: smooth;
+  position: fixed;
+  top: 10vh;
+  transition: all ease 1s;
+  z-index: 6;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+  -ms-transition: all ease 1s;
+  -o-transition: all ease 1s;
+}
 main {
   display: flex;
   flex-direction: column;
@@ -187,8 +241,14 @@ main section article {
   position: relative;
   display: flex;
   flex-direction: row;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
 }
 main section article a {
+  width: 100%;
+  height: 100%;
   padding: 10px;
   border: #65727c dashed 2px;
   text-decoration: none;
@@ -219,7 +279,7 @@ main section article a img {
   position: relative;
   z-index: -5;
 }
-main section nav{
+main section nav {
   visibility: hidden;
   display: flex;
   background: rgba(255, 255, 255, 0.68);
@@ -228,36 +288,49 @@ main section nav{
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
   border: 1px solid rgba(255, 255, 255, 0.64);
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
 }
-main section nav ul{
+main section nav ul {
   display: flex;
   flex-direction: row;
 }
-main section nav ul li{
+main section nav ul li {
   z-index: 1;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
   list-style: none;
   text-decoration: none;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
 }
-main section nav ul li a{
-  transition: all ease .5s;
+main section nav ul li a {
+  transition: all ease 0.5s;
   text-decoration: none;
   color: #000;
-}main section nav ul li:hover{
-  transition: all ease .5s;
-  -webkit-transition: all ease .5s;
-  -moz-transition: all ease .5s;
-  -ms-transition: all ease .5s;
-  -o-transition: all ease .5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+}
+main section nav ul li:hover {
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
   background: #000;
 }
-main section nav ul li:hover a{
+main section nav ul li:hover a {
   color: #cfcfcf;
-  transition: all ease .5s;
-  -webkit-transition: all ease .5s;
-  -moz-transition: all ease .5s;
-  -ms-transition: all ease .5s;
-  -o-transition: all ease .5s;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
 }
 .layout {
   width: 95%;
@@ -275,4 +348,3 @@ footer {
   position: relative;
   bottom: 0;
 }
-
