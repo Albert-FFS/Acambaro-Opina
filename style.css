@@ -105,7 +105,6 @@ header img {
   object-fit: cover;
 }
 nav {
-  z-index: 1;
   font-family: "Noto Sans Coptic", sans-serif;
   background: #45484a;
   display: flex;
@@ -113,32 +112,21 @@ nav {
   position: sticky;
 }
 nav ul {
-  z-index: 2;
   display: flex;
   align-items: center;
 }
 nav ul li {
-  z-index: 3;
   text-decoration: none;
   list-style: none;
   padding: 5px 10px;
   border-radius: 8px;
   transition: all ease 0.5s;
-  -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
-  -ms-transition: all ease 0.5s;
-  -o-transition: all ease 0.5s;
 }
 nav ul li:hover {
   background-color: #cfcfcf;
   transition: all ease 0.5s;
-  -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
-  -ms-transition: all ease 0.5s;
-  -o-transition: all ease 0.5s;
 }
 nav ul li a {
-  z-index: 4;
   text-decoration: none;
   font-size: 1.5em;
   text-transform: uppercase;
