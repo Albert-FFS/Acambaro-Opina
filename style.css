@@ -67,7 +67,7 @@ body {
 @media only screen and (max-width: 1020px) {
   .layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: auto auto; */
   }
   nav ul {
     flex-direction: column;
@@ -78,6 +78,9 @@ body {
   .layout {
     display: grid;
     grid-template-columns: 1fr;
+  }
+  main section article a p{
+    padding: .1em;
   }
 }
 
