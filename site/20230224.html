@@ -83,8 +83,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- EXTERNAL SOURCE -->
-    <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../app.js" defer></script>
     <script
       src="https://kit.fontawesome.com/0e8b404454.js"
       crossorigin="anonymous"
@@ -93,34 +93,79 @@
   <body>
     <header>
       <h1>Acambaro Elige</h1>
-      <img src="media/Logo.svg" alt="" />
+      <img src="../media/Logo.svg" alt="" />
     </header>
     <nav>
       <ul>
-        <li><a href="./index.html">Inicio</a></li>
-        <!-- <li><a onclick="OpenModal(MainInformation.AboutThis)" href="#">Acerca De</a></li>
-        <li><a onclick="OpenModal(MainInformation.AboutUs)" href="#">Quienes Somos?</a></li>
-        <li><a onclick="OpenModal(MainInformation.ContactUs)" href="#">Contactanos</a></li>
-        <li><a onclick="OpenModal(MainInformation.FindUs)" href="#">Buscanos en</a></li> -->
+        <li><a href="../index.html">Inicio</a></li>
+        <li>
+          <a onclick="OpenModal(MainInformation.AboutThis)" href="#"
+            >Acerca De</a
+          >
+        </li>
+        <li>
+          <a onclick="OpenModal(MainInformation.AboutUs)" href="#"
+            >Quienes Somos?</a
+          >
+        </li>
+        <li>
+          <a onclick="OpenModal(MainInformation.ContactUs)" href="#"
+            >Contactanos</a
+          >
+        </li>
+        <li>
+          <a onclick="OpenModal(MainInformation.FindUs)" href="#"
+            >Buscanos en</a
+          >
+        </li>
       </ul>
     </nav>
     <div class="modal"></div>
     <main>
-      <section class="layout">
+      <article id="MainArticle">
+        <h2>Resultados de las encuestas del Primer Bimestre del 2023.</h2>
+        <p>
+          MORENA Acámbaro: Se llevaron a cabo las encuestas internas de Morena
+          en Acámbaro, entre el mes de enero y febrero donde la ciudadanía
+          acambarense eligió de manera libre y voluntaria su preferencia de a
+          quien consideren mejor perfil para encabezar los proyectos políticos
+          del partido, con la finalidad de sacar al posible candidato a la
+          presidencia de Acámbaro saliendo como ganador Jesús Malagón Panigua
+          con un 38%, en segundo lugar Olga Tirado Zúñiga, con un 34%, en tercer
+          lugar Alejandro Tirado Zúñiga, con un 18%, y en 4 lugar Luis Magdaleno
+          Gordillo, con un 10%. ¿Será acaso que vendrá un relevo Generacional en
+          Acámbaro? Las cartas ya están repartidas en el estado y en Acámbaro ya
+          están jugadas. Ricardo Sheffield actual director nacional de la
+          PROFECO y Ernesto Prieto Ortega, actual director nacional del INDEP
+          encabezan la contienda como aspirantes a candidato a gobernador en
+          Guanajuato de tal manera que la estructura de Ricardo Sheffield en
+          Acámbaro está encabezada por los Tirado y la estructura de Ernesto
+          Prieto está encabezada por, Jesús Malagón y José Luis Sánchez. Todos
+          ellos esperando a que la Ley de equidad de genero les favorezca.
+          Ernesto Prieto Ortega, lleva mucha ventaja respecto a Ricardo
+          Sheffield, ya que los morenistas lo ven como el mejor perfil para
+          encabezar los proyectos políticos en el estado de Guanajuato, y la
+          militancia morenista, ve a Ricardo Sheffield como un cartucho quemado,
+          ya que perdió las elecciones en León Guanajuato. Columna por Julieta
+          Cárdenas.
+        </p>
+        <img src="../media/site/20230224.png" alt="">
+      </article>
+
+      <!-- <section class="layout">
         <article class="Art1">
-          <a  href="./site/20230224.html" target="_blank">
-            <h3>Resultados de las encuestas del Primer Bimestre del 2023</h3>
+          <a title="Mi Articulo" href="#" target="_blank">
+            <h3>Lorem ipsum, dolor sit amet consectetur</h3>
             <p>
-              Se llevaron a cabo las encuestas internas de Morena
-              en Acámbaro, entre el mes de enero y febrero donde la ciudadanía
-              acambarense eligió de manera libre y voluntaria su preferencia de a
-              quien consideren mejor perfil para encabezar los proyectos políticos
-              <span>Seguir Leyendo . . . </span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur quod impedit dicta unde veniam atque, quibusdam porro,
+              nulla, adipisci animi officia dolore quis cum? Vero veniam hic
+              sapiente magnam aspernatur.
             </p>
-            <img src="./media/site/20230224.png" alt="Grafica para presidencia de Acámbaro en Enero-Febrero 2023" title="Grafica para presidencia de Acámbaro en Enero-Febrero 2023" />
+            <img src="../media/image-solid.svg" alt="" />
           </a>
         </article>
-        <!-- <article class="Art2">
+        <article class="Art2">
           <a
             title="Mi Articulo"
             href="#"
@@ -134,10 +179,10 @@
               illum, quam ratione dolor nam assumenda quia. Atque magnam culpa
               corrupti repudiandae.
             </p>
-            <img src="media/image-solid.svg" alt="" />
+            <img src="../media/image-solid.svg" alt="" />
           </a>
-        </article> -->
-        <!-- <article class="Art3">
+        </article>
+        <article class="Art3">
           <a
             title="Mi Articulo"
             href="#"
@@ -151,10 +196,10 @@
               ipsam eligendi hic, soluta blanditiis voluptate qui cum? Fugiat
               voluptatem repellendus incidunt.
             </p>
-            <img src="media/image-solid.svg" alt="" />
+            <img src="../media/image-solid.svg" alt="" />
           </a>
-        </article> -->
-        <!-- <article class="Art4">
+        </article>
+        <article class="Art4">
           <a
             title="Mi Articulo"
             href="#"
@@ -169,10 +214,10 @@
               perspiciatis debitis facere! Quibusdam reiciendis voluptatibus
               voluptatem ab.
             </p>
-            <img src="media/image-solid.svg" alt="" />
+            <img src="../media/image-solid.svg" alt="" />
           </a>
-        </article> -->
-        <!-- <article class="Art5">
+        </article>
+        <article class="Art5">
           <a
             title="Mi Articulo"
             href="#"
@@ -186,10 +231,10 @@
               odit rem nostrum animi vero placeat nesciunt distinctio numquam
               provident, omnis pariatur reprehenderit. Omnis, temporibus!
             </p>
-            <img src="media/image-solid.svg" alt="" />
+            <img src="../media/image-solid.svg" alt="" />
           </a>
-        </article> -->
-        <!-- <article class="Art6">
+        </article>
+        <article class="Art6">
           <a
             title="Mi Articulo"
             href="#"
@@ -203,10 +248,10 @@
               error magnam perferendis? Provident tempore dolorum velit eos
               aspernatur obcaecati error fuga.
             </p>
-            <img src="media/image-solid.svg" alt="" />
+            <img src="../media/image-solid.svg" alt="" />
           </a>
-        </article> -->
-        <!-- <article class="Art7">
+        </article>
+        <article class="Art7">
           <a
             title="Mi Articulo"
             href="#"
@@ -220,10 +265,10 @@
               ipsa commodi, repellendus quaerat perferendis. Corporis nam
               consequatur odit sint accusantium doloribus.
             </p>
-            <img src="media/image-solid.svg" alt="" />
+            <img src="../media/image-solid.svg" alt="" />
           </a>
-        </article> -->
-        <!-- <article class="Art8">
+        </article>
+        <article class="Art8">
           <a
             title="Mi Articulo"
             href="#"
@@ -237,10 +282,10 @@
               expedita consequatur magnam ducimus nesciunt ratione cum ipsa
               veniam nisi facere enim, esse, sapiente itaque?
             </p>
-            <img src="media/image-solid.svg" alt="" />
+            <img src="../media/image-solid.svg" alt="" />
           </a>
-        </article> -->
-        <!-- <article class="Art9">
+        </article>
+        <article class="Art9">
           <a
             title="Mi Articulo"
             href="#"
@@ -254,10 +299,10 @@
               impedit ut? Nostrum facilis culpa voluptatibus, esse vero debitis
               a quas.
             </p>
-            <img src="media/image-solid.svg" alt="" />
+            <img src="../media/image-solid.svg" alt="" />
           </a>
-        </article> -->
-        <!-- <article class="Art10">
+        </article>
+        <article class="Art10">
           <a
             title="Mi Articulo"
             href="#"
@@ -271,9 +316,9 @@
               necessitatibus praesentium odio itaque voluptatibus ducimus, rem
               nostrum cupiditate quae quaerat repellendus nam. Vero?
             </p>
-            <img src="media/image-solid.svg" alt="" />
+            <img src="../media/image-solid.svg" alt="" />
           </a>
-        </article> -->
+        </article>
         <nav>
           <ul>
             <li>
@@ -301,7 +346,7 @@
             </li>
           </ul>
         </nav>
-      </section>
+      </section> -->
       <svg
         width="100%"
         height="100%"

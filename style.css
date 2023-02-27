@@ -23,11 +23,11 @@ body {
       "Art1 Art1 Art1" auto
       "Art2 Art3 Art3" auto
       "Art4 Art4 Art4" auto
-      "Art5 Art5 Art6" auto
+      "Art5 Art6 Art6" auto
       "Art7 Art8 Art9" auto
       "Art10 Art10 Art10" auto
-      / 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+      / auto auto auto ;
+    grid-template-columns: auto auto auto;
   }
   .Art1 {
     grid-area: Art1;
@@ -105,6 +105,7 @@ header img {
   object-fit: cover;
 }
 nav {
+  z-index: 1;
   font-family: "Noto Sans Coptic", sans-serif;
   background: #45484a;
   display: flex;
@@ -112,18 +113,16 @@ nav {
   position: sticky;
 }
 nav ul {
+  z-index: 2;
   display: flex;
   align-items: center;
 }
 nav ul li {
+  z-index: 3;
   text-decoration: none;
   list-style: none;
   padding: 5px 10px;
   border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
   transition: all ease 0.5s;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
@@ -139,6 +138,7 @@ nav ul li:hover {
   -o-transition: all ease 0.5s;
 }
 nav ul li a {
+  z-index: 4;
   text-decoration: none;
   font-size: 1.5em;
   text-transform: uppercase;
@@ -168,16 +168,16 @@ nav ul li:hover a {
   background: #fff;
   z-index: -10;
   transition: all ease 1s;
-  -webkit-transition: all ease 1s;
-  -moz-transition: all ease 1s;
-  -ms-transition: all ease 1s;
-  -o-transition: all ease 1s;
   scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   padding: 2em;
+  -webkit-transition: all ease 1s;
+  -moz-transition: all ease 1s;
+  -ms-transition: all ease 1s;
+  -o-transition: all ease 1s;
 }
 .CloseButton {
   position: absolute;
@@ -191,6 +191,14 @@ nav ul li:hover a {
   font-size: 1.5em;
   cursor: pointer;
   transition:all ease .5s ;
+  -webkit-transition:all ease .5s ;
+  -moz-transition:all ease .5s ;
+  -ms-transition:all ease .5s ;
+  -o-transition:all ease .5s ;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 .CloseButton:hover{
   color: #f00;
@@ -218,33 +226,38 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   background: #cfcfcf;
-  z-index: -7;
+  z-index: 1;
+  padding: 1em 2em;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 main svg {
   height: 100vh;
   width: 100vw;
   position: fixed;
   bottom: -16vh;
-  z-index: -5;
+  z-index: -6;
 }
 main section article {
-  padding: 30px 15px;
-  z-index: 1;
+  padding: 10px;
   background: rgba(255, 255, 255, 0.68);
-  border-radius: 16px;
+  border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
   border: 1px solid rgba(255, 255, 255, 0.64);
   position: relative;
+  z-index: 3;
   display: flex;
   flex-direction: row;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  -ms-border-radius: 16px;
-  -o-border-radius: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 main section article a {
   width: 100%;
@@ -259,6 +272,21 @@ main section article a {
   justify-content: center;
   align-items: stretch;
   color: #45484a;
+  z-index: 4;
+  transition: all ease .5s;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  -ms-transition: all ease .5s;
+  -o-transition: all ease .5s;
+}
+main section article a:hover{
+  border: #333 dashed 2px;
+  background: #fff;
+  transition: all ease .5s;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  -ms-transition: all ease .5s;
+  -o-transition: all ease .5s;
 }
 main section article a h3 {
   font-family: "Noto Sans Coptic", sans-serif;
@@ -268,13 +296,18 @@ main section article a h3 {
   margin: 10px auto 20px;
 }
 main section article a p {
+  padding: 1em .5em;
   font-size: 1em;
   font-family: "Hornbill Personal Use", sans-serif;
   width: 40%;
+  min-width: 20px;
 }
 main section article a img {
   width: 50%;
-  height: 70%;
+  min-width: 300px;
+  /* height: 70%; */
+  aspect-ratio: 4/3;
+  /* aspect-ratio: 16/9; */
   object-fit: unset;
   position: relative;
   z-index: -5;
@@ -335,9 +368,32 @@ main section nav ul li:hover a {
 .layout {
   width: 95%;
   padding: 10px;
-  z-index: -4;
+  z-index: 2;
   display: grid;
   gap: 8px;
+}
+#MainArticle{
+  background: #fff;
+  padding: 2em 1em 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#MainArticle h2{
+  font-size: 2em;
+  margin: 5px auto 2em;
+}
+#MainArticle p{
+  padding: .5em 1.5em 1em;
+  font-size: 1.2em;
+  text-align: left;
+  word-wrap: break-word;
+}
+#MainArticle img{
+  margin: 1em auto;
+  width: 80%;
+
 }
 footer {
   font-family: "Noto Sans Coptic", sans-serif;

@@ -1,3 +1,6 @@
+//HEAD 
+const head = document.querySelector('head');
+console.log(head);
 //Articulos
 const ARTICULO_01 = document.querySelector(".Art1");
 const ARTICULO_02 = document.querySelector(".Art2");
@@ -21,7 +24,9 @@ var miObject = {
   text: "Esto no es un LoremIpsum",
   src:'/media/image-solid.svg'
 }
-ChangeText(ARTICULO_01,miObject);
+//ChangeText(ARTICULO_01,miObject);
+//funcional
+
 //Nav Bar Inicio
 const Modal = document.querySelector(".modal");
 const CloseButton =
