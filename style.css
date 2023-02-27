@@ -364,7 +364,7 @@ main section nav ul li:hover a {
   gap: 8px;
 }
 #MainArticle{
-  background: #fff;
+  background: rgba(255,255,255,0.8);
   padding: 2em 1em 3em;
   display: flex;
   flex-direction: column;
