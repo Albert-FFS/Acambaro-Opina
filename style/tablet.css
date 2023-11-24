@@ -1,0 +1,37 @@
+body {
+}
+header {
+}
+main {
+  width: 100vw;
+}
+main .layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .layout article {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding:40px 20px 20px;
+}
+main .layout article h3 {
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+main .layout article p {
+  font-size: 1em;
+}
+main .layout article p a {
+}
+main .layout article p a span {
+}
+main .layout article img {
+  width: 100%;
+  margin-top: 1em;
+}

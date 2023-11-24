@@ -1,89 +1,21 @@
 @import url("https://fonts.cdnfonts.com/css/ringo-mango"); /*Title*/
 @import url("https://fonts.cdnfonts.com/css/noto-sans-coptic");
 @import url("https://fonts.cdnfonts.com/css/hornbill-personal-use"); /*Text*/
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
-  background: rgba(210, 205, 205, 0.9);
-  min-width: 100vw;
-  max-width: 100vw;
+  background: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   overflow-x: hidden;
   position: relative;
 }
-/* Media Queries  */
-@media only screen and (min-width: 1021px) {
-  .layout {
-    grid:
-      "Art1 Art1 Art1" auto
-      "Art2 Art3 Art3" auto
-      "Art4 Art4 Art4" auto
-      "Art5 Art6 Art6" auto
-      "Art7 Art8 Art9" auto
-      "Art10 Art10 Art10" auto
-      / auto auto auto ;
-    grid-template-columns: auto auto auto;
-  }
-  .Art1 {
-    grid-area: Art1;
-  }
-  .Art2 {
-    grid-area: Art2;
-  }
-  .Art3 {
-    grid-area: Art3;
-  }
-  .Art4 {
-    grid-area: Art4;
-  }
-  .Art5 {
-    grid-area: Art5;
-  }
-  .Art6 {
-    grid-area: Art6;
-  }
-  .Art7 {
-    grid-area: Art7;
-  }
-  .Art8 {
-    grid-area: Art8;
-  }
-  .Art9 {
-    grid-area: Art9;
-  }
-  .Art10 {
-    grid-area: Art10;
-  }
-  nav ul {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-}
-@media only screen and (max-width: 1020px) {
-  .layout {
-    display: grid;
-    /* grid-template-columns: auto auto; */
-  }
-  nav ul {
-    flex-direction: column;
-    justify-content: stretch;
-  }
-}
-@media only screen and (max-width: 480px) and (orientation: portrait) {
-  .layout {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  main section article a p{
-    padding: .1em;
-  }
-}
-
 header {
   width: 100%;
   -webkit-user-select: none;
@@ -96,6 +28,7 @@ header {
   background: #45484a;
   padding: 2em;
   flex-wrap: wrap-reverse;
+  z-index: 4;
 }
 header h1 {
   font-family: "Ringo Mango", sans-serif;
@@ -112,11 +45,14 @@ nav {
   background: #45484a;
   display: flex;
   padding: 5px;
-  position: sticky;
+  position: relative;
+  width: 100%;
+  z-index: 4;
 }
 nav ul {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 nav ul li {
   text-decoration: none;
@@ -181,25 +117,25 @@ nav ul li:hover a {
   border-radius: 10px;
   font-size: 1.5em;
   cursor: pointer;
-  transition:all ease .5s ;
-  -webkit-transition:all ease .5s ;
-  -moz-transition:all ease .5s ;
-  -ms-transition:all ease .5s ;
-  -o-transition:all ease .5s ;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-.CloseButton:hover{
+.CloseButton:hover {
   color: #f00;
   background-color: #fff;
   border: #f00 2px solid;
-  transition: all ease .5s;
-  -webkit-transition: all ease .5s;
-  -moz-transition: all ease .5s;
-  -ms-transition: all ease .5s;
-  -o-transition: all ease .5s;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
 }
 .OpenModal {
   scroll-behavior: smooth;
@@ -220,19 +156,20 @@ main {
   width: 100vw;
   background: #cfcfcf;
   z-index: 1;
-  padding: 1em 2em;
   overflow: hidden;
   box-sizing: border-box;
+  /* position: relative; */
 }
 main svg {
-  height: 100vh;
+  /* height: 100vh; */
+  aspect-ratio: 9/16;
   width: 100vw;
   position: fixed;
-  bottom: -16vh;
+  /* left: -1em; */
+  bottom: 0;
   z-index: -6;
 }
 main section article {
-  padding: 10px;
   background: rgba(255, 255, 255, 0.68);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -243,7 +180,6 @@ main section article {
   z-index: 3;
   display: flex;
   flex-direction: row;
-  box-sizing: border-box;
   overflow: hidden;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -251,33 +187,9 @@ main section article {
   -o-border-radius: 20px;
 }
 main section article a {
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  border: #65727c dashed 2px;
   text-decoration: none;
   cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  color: #45484a;
-  z-index: 4;
-  transition: all ease .5s;
-  -webkit-transition: all ease .5s;
-  -moz-transition: all ease .5s;
-  -ms-transition: all ease .5s;
-  -o-transition: all ease .5s;
-}
-main section article a:hover{
-  border: #333 dashed 2px;
-  background: #fff;
-  transition: all ease .5s;
-  -webkit-transition: all ease .5s;
-  -moz-transition: all ease .5s;
-  -ms-transition: all ease .5s;
-  -o-transition: all ease .5s;
+  color: blue;
 }
 main section article a h3 {
   font-family: "Noto Sans Coptic", sans-serif;
@@ -287,7 +199,7 @@ main section article a h3 {
   margin: 10px auto 20px;
 }
 main section article a p {
-  padding: 1em .5em;
+  padding: 1em 0.5em;
   font-size: 1em;
   font-family: "Hornbill Personal Use", sans-serif;
   width: 40%;
@@ -363,28 +275,27 @@ main section nav ul li:hover a {
   display: grid;
   gap: 8px;
 }
-#MainArticle{
-  background: rgba(255,255,255,0.8);
+#MainArticle {
+  background: rgba(255, 255, 255, 0.8);
   padding: 2em 1em 3em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-#MainArticle h2{
+#MainArticle h2 {
   font-size: 2em;
   margin: 5px auto 2em;
 }
-#MainArticle p{
-  padding: .5em 1.5em 1em;
+#MainArticle p {
+  padding: 0.5em 1.5em 1em;
   font-size: 1.2em;
   text-align: left;
   word-wrap: break-word;
 }
-#MainArticle img{
+#MainArticle img {
   margin: 1em auto;
   width: 80%;
-
 }
 footer {
   font-family: "Noto Sans Coptic", sans-serif;

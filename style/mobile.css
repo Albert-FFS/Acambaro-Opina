@@ -1,0 +1,53 @@
+body {
+}
+header {
+}
+main {
+  width: 100%;
+}
+main .layout {
+  width: 100%;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .layout article {
+  max-width: 320px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+}
+main .layout article h3 {
+  font-size: 1.75em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+main .layout article p {
+  font-size: 1em;
+  text-align: left;
+}
+main .layout article p a {
+  text-decoration: none;
+}
+main .layout article p a span {
+  font-weight: 900;
+  font-size: 1.5em;
+  animation: spanAnimation 5s ease 0 infinite forwards;
+  -webkit-animation: spanAnimation 5s ease infinite;
+}
+@keyframes spanAnimation {
+  0% {
+    letter-spacing: 5px;
+  }
+  50% {
+    letter-spacing: 15px;
+  }
+  100% {
+    letter-spacing: 5px;
+  }
+}
+main .layout article img {
+}

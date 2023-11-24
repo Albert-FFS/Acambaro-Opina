@@ -28,6 +28,13 @@ var miObject = {
 //funcional
 
 //Nav Bar Inicio
+const NavBar = document.getElementById('Navbar');
+function ScrollNav(object){
+  // console.log(NavBar.style.y);
+  //console.log(object);
+}
+console.log(NavBar.style.y);
+//Modal
 const Modal = document.querySelector(".modal");
 const CloseButton =
   '<button class="CloseButton" onclick="CloseModal()">Close</button>';

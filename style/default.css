@@ -1,0 +1,36 @@
+body {
+}
+header {
+}
+main {
+  width: 100vw;
+}
+main .layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 30px ;
+}
+main .layout article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+main .layout article h3 {
+  font-size: 2.3em;
+  margin-bottom: 2em;
+}
+main .layout article p {
+  font-size: 1.2em;
+}
+main .layout article p a {
+}
+main .layout article p a span {
+}
+main .layout article img {
+  margin-top: 1em;
+  width: 100%;
+}
